@@ -1,0 +1,318 @@
+file,athlete,attempt,status,num_gaps,num_gaps_11_6,num_gaps_6_1,max_gap,mean_gap,takeoff_point
+Drei MJ_185 Maurer-6 000.dat,185 Maurer-6,6,grün,0,0,0,0,0.0,45680.0
+Drei MJ_257 Judt-4 000.dat,257 Judt-4,4,grün,0,0,0,0,0.0,47680.0
+Drei MJ_334 Brinkmann-6 000.dat,334 Brinkmann-6,6,grün,0,0,0,0,0.0,47680.0
+Drei MJ_108 Biederlack-1 000.dat,108 Biederlack-1,1,grün,0,0,0,0,0.0,45680.0
+Drei MJ_293 Warnig 13-1 000.dat,293 Warnig 13-1,1,grün,0,0,0,0,0.0,45680.0
+Drei MJ_23 Osazee-1 000-rep.dat,23 Osazee-1,1,grün,0,0,0,0,0.0,45680.0
+Drei MJ_23 Osazee-6 000.dat,23 Osazee-6,6,grün,0,0,0,0,0.0,45680.0
+Drei MJ_257 Judt-5 000.dat,257 Judt-5,5,grün,0,0,0,0,0.0,47680.0
+Drei MJ_115 Yamal-6 000.dat,115 Yamal-6,6,grün,0,0,0,0,0.0,45680.0
+Drei MJ_23 Osazee-4 000.dat,23 Osazee-4,4,grün,0,0,0,0,0.0,45680.0
+Drei MJ_334 Brinkmann-5 000.dat,334 Brinkmann-5,5,grün,0,0,0,0,0.0,47680.0
+Drei MJ_108 Biederlack-2 000.dat,108 Biederlack-2,2,grün,0,0,0,0,0.0,45680.0
+Drei MJ_293 Warnig 13-2 000.dat,293 Warnig 13-2,2,grün,0,0,0,0,0.0,45680.0
+Drei MJ_185 Maurer-5 000.dat,185 Maurer-5,5,grün,4,0,0,11104.0,7613.5,45680.0
+Drei MJ_786 Massing-5 000.dat,786 Massing-5,5,grün,0,0,0,0,0.0,47680.0
+Drei MJ_115 Yamal-4 000.dat,115 Yamal-4,4,rot,4,1,1,16379.0,10061.5,45680.0
+Drei MJ_786 Massing-4 000.dat,786 Massing-4,4,grün,0,0,0,0,0.0,47680.0
+Drei MJ_185 Maurer-4 000.dat,185 Maurer-4,4,grün,0,0,0,0,0.0,45680.0
+Drei MJ_115 Yamal-5 000.dat,115 Yamal-5,5,grün,0,0,0,0,0.0,45680.0
+Drei MJ_257 Judt-6 000.dat,257 Judt-6,6,grün,0,0,0,0,0.0,47680.0
+Drei MJ_108 Biederlack-3 000.dat,108 Biederlack-3,3,grün,4,0,0,18099.0,9648.75,45680.0
+Drei MJ_334 Brinkmann-4 000.dat,334 Brinkmann-4,4,grün,3,0,0,15064.0,7667.333333333333,47680.0
+Drei MJ_23 Osazee-5 000.dat,23 Osazee-5,5,grün,0,0,0,0,0.0,45680.0
+Drei MJ_185 Maurer-2 000-rep.dat,185 Maurer-2,2,grün,0,0,0,0,0.0,45680.0
+Drei MJ_293 Warnig 13-3 000.dat,293 Warnig 13-3,3,gelb,4,1,0,14447.0,9624.0,45680.0
+Drei MJ_293 Warnig 13-6 000.dat,293 Warnig 13-6,6,rot,4,0,2,23339.0,16497.75,45680.0
+Drei MJ_115 Yamal-4 000-rep.dat,115 Yamal-4,4,grün,0,0,0,0,0.0,45680.0
+Drei MJ_108 Biederlack-6 000.dat,108 Biederlack-6,6,grün,0,0,0,0,0.0,45680.0
+Drei MJ_334 Brinkmann-1 000.dat,334 Brinkmann-1,1,rot,2,0,1,13420.0,10429.0,47680.0
+Drei MJ_834 Hopfensitz-2 000.dat,834 Hopfensitz-2,2,grün,0,0,0,0,0.0,47680.0
+Drei MJ_276 Moor-2 000.dat,276 Moor-2,2,grün,0,0,0,0,0.0,47680.0
+Drei MJ_185 Maurer-5 000-rep.dat,185 Maurer-5,5,grün,0,0,0,0,0.0,45680.0
+Drei MJ_300 Pulow-2 000.dat,300 Pulow-2,2,grün,0,0,0,0,0.0,47680.0
+Drei MJ_257 Judt-3 000.dat,257 Judt-3,3,grün,0,0,0,0,0.0,47680.0
+Drei MJ_786 Massing-1 000.dat,786 Massing-1,1,grün,4,0,0,12848.0,7491.25,47680.0
+Drei MJ_185 Maurer-1 000.dat,185 Maurer-1,1,grün,0,0,0,0,0.0,45680.0
+Drei MJ_729 Limberg-1 000.dat,729 Limberg-1,1,grün,0,0,0,0,0.0,47680.0
+Drei MJ_257 Judt-2 000.dat,257 Judt-2,2,grün,0,0,0,0,0.0,47680.0
+Drei MJ_115 Yamal-1 000.dat,115 Yamal-1,1,grün,0,0,0,0,0.0,45680.0
+Drei MJ_328 Benze-1 000.dat,328 Benze-1,1,grün,0,0,0,0,0.0,47680.0
+Drei MJ_23 Osazee-1 000.dat,23 Osazee-1,1,grün,0,0,0,0,0.0,45680.0
+Drei MJ_856 LÅck-1 000.dat,856 Lück-1,1,grün,0,0,0,0,0.0,47680.0
+Drei MJ_834 Hopfensitz-3 000.dat,834 Hopfensitz-3,3,grün,0,0,0,0,0.0,47680.0
+Drei MJ_276 Moor-3 000.dat,276 Moor-3,3,grün,0,0,0,0,0.0,47680.0
+Drei MJ_115 Yamal-3 000.dat,115 Yamal-3,3,grün,0,0,0,0,0.0,45680.0
+Drei MJ_729 Limberg-3 000.dat,729 Limberg-3,3,gelb,4,3,0,17147.0,11210.25,47680.0
+Drei MJ_185 Maurer-3 000-rep.dat,185 Maurer-3,3,grün,0,0,0,0,0.0,45680.0
+Drei MJ_300 Pulow-1 000.dat,300 Pulow-1,1,grün,0,0,0,0,0.0,47680.0
+Drei MJ_185 Maurer-2 000.dat,185 Maurer-2,2,grün,4,0,0,8057.0,3881.5,45680.0
+Drei MJ_293 Warnig 13-5 000.dat,293 Warnig 13-5,5,grün,0,0,0,0,0.0,45680.0
+Drei MJ_328 Benze-3 000.dat,328 Benze-3,3,grün,0,0,0,0,0.0,47680.0
+Drei MJ_276 Moor-1 000.dat,276 Moor-1,1,grün,0,0,0,0,0.0,47680.0
+Drei MJ_856 LÅck-3 000.dat,856 Lück-3,3,grün,0,0,0,0,0.0,47680.0
+Drei MJ_834 Hopfensitz-1 000.dat,834 Hopfensitz-1,1,grün,0,0,0,0,0.0,47680.0
+Drei MJ_108 Biederlack-5 000.dat,108 Biederlack-5,5,grün,0,0,0,0,0.0,45680.0
+Drei MJ_23 Osazee-3 000.dat,23 Osazee-3,3,grün,0,0,0,0,0.0,45680.0
+Drei MJ_334 Brinkmann-2 000.dat,334 Brinkmann-2,2,grün,0,0,0,0,0.0,47680.0
+Drei MJ_328 Benze-2 000.dat,328 Benze-2,2,grün,3,0,0,10697.0,5555.333333333333,47680.0
+Drei MJ_293 Warnig 13-4 000.dat,293 Warnig 13-4,4,grün,0,0,0,0,0.0,45680.0
+Drei MJ_856 LÅck-2 000.dat,856 Lück-2,2,grün,0,0,0,0,0.0,47680.0
+Drei MJ_334 Brinkmann-3 000.dat,334 Brinkmann-3,3,grün,0,0,0,0,0.0,47680.0
+Drei MJ_23 Osazee-2 000.dat,23 Osazee-2,2,grün,0,0,0,0,0.0,45680.0
+Drei MJ_115 Yamal-2 000.dat,115 Yamal-2,2,grün,0,0,0,0,0.0,45680.0
+Drei MJ_257 Judt-1 000.dat,257 Judt-1,1,grün,0,0,0,0,0.0,47680.0
+Drei MJ_185 Maurer-2 000-rep-rep.dat,185 Maurer-2,2,grün,0,0,0,0,0.0,45680.0
+Drei MJ_729 Limberg-2 000.dat,729 Limberg-2,2,gelb,3,1,0,32073.0,19633.333333333332,47680.0
+Drei MJ_786 Massing-3 000.dat,786 Massing-3,3,grün,0,0,0,0,0.0,47680.0
+Drei MJ_185 Maurer-3 000.dat,185 Maurer-3,3,grün,3,0,0,13642.0,8212.333333333334,45680.0
+DreiWJ_133 Teichmann-5 000.dat,133 Teichmann-5,5,grün,0,0,0,0,0.0,47680.0
+DreiWJ_340 Grimm-3 001.dat,340 Grimm-3,3,grün,0,0,0,0,0.0,49680.0
+DreiWJ_460 Eze-2 000.dat,460 Eze-2,2,grün,0,0,0,0,0.0,47680.0
+DreiWJ_133 Teichmann-5 000-rep-rep-rep.dat,133 Teichmann-5,5,grün,0,0,0,0,0.0,47680.0
+DreiWJ_794 Nathan-2 000.dat,794 Nathan-2,2,grün,0,0,0,0,0.0,49680.0
+DreiWJ_340 Grimm-3 000.dat,340 Grimm-3,3,grün,0,0,0,0,0.0,47680.0
+DreiWJ_118 Edzards-5 000.dat,118 Edzards-5,5,grün,0,0,0,0,0.0,47680.0
+DreiWJ_568 Stantke-2 000.dat,568 Stantke-2,2,grün,0,0,0,0,0.0,49680.0
+DreiWJ_229 Lukas-3 000.dat,229 Lukas-3,3,grün,0,0,0,0,0.0,49680.0
+DreiWJ_687 Winkler-2 000.dat,687 Winkler-2,2,grün,0,0,0,0,0.0,47680.0
+DreiWJ_758 Brîkling-3 000.dat,758 Brökling-3,3,grün,0,0,0,0,0.0,49680.0
+DreiWJ_118 Edzards-4 000.dat,118 Edzards-4,4,grün,0,0,0,0,0.0,47680.0
+DreiWJ_147 Mensah-1 000.dat,147 Mensah-1,1,gelb,5,2,0,31865.0,18549.4,49680.0
+DreiWJ_568 Stantke-3 000.dat,568 Stantke-3,3,grün,0,0,0,0,0.0,49680.0
+DreiWJ_329 Werner-1 000.dat,329 Werner-1,1,grün,0,0,0,0,0.0,47680.0
+DreiWJ_687 Winkler-3 000.dat,687 Winkler-3,3,grün,0,0,0,0,0.0,47680.0
+DreiWJ_229 Lukas-2 000.dat,229 Lukas-2,2,grün,0,0,0,0,0.0,49680.0
+DreiWJ_147 Mensah-2 000-rep.dat,147 Mensah-2,2,grün,0,0,0,0,0.0,49680.0
+DreiWJ_758 Brîkling-2 000.dat,758 Brökling-2,2,grün,0,0,0,0,0.0,49680.0
+DreiWJ_145 Beraz 11-6 000.dat,145 Beraz 11-6,6,grün,0,0,0,0,0.0,47680.0
+DreiWJ_794 Nathan-3 000.dat,794 Nathan-3,3,grün,0,0,0,0,0.0,49680.0
+DreiWJ_460 Eze-3 000.dat,460 Eze-3,3,grün,0,0,0,0,0.0,47680.0
+DreiWJ_79 Loewenthal-4 000.dat,79 Loewenthal-4,4,grün,0,0,0,0,0.0,47680.0
+DreiWJ_340 Grimm-2 000.dat,340 Grimm-2,2,grün,0,0,0,0,0.0,47680.0
+DreiWJ_329 Werner-3 000.dat,329 Werner-3,3,grün,0,0,0,0,0.0,47680.0
+DreiWJ_568 Stantke-1 000.dat,568 Stantke-1,1,grün,0,0,0,0,0.0,49680.0
+DreiWJ_147 Mensah-3 000.dat,147 Mensah-3,3,grün,0,0,0,0,0.0,49680.0
+DreiWJ_118 Edzards-6 000.dat,118 Edzards-6,6,grün,0,0,0,0,0.0,47680.0
+DreiWJ_145 Beraz 11-4 000.dat,145 Beraz 11-4,4,grün,0,0,0,0,0.0,47680.0
+DreiWJ_687 Winkler-1 000.dat,687 Winkler-1,1,grün,0,0,0,0,0.0,47680.0
+DreiWJ_147 Mensah-1 000-rep-rep.dat,147 Mensah-1,1,grün,0,0,0,0,0.0,49680.0
+DreiWJ_367 Bîhmer-3 000.dat,367 Böhmer-3,3,grün,0,0,0,0,0.0,47680.0
+DreiWJ_147 Mensah-1 000-rep.dat,147 Mensah-1,1,grün,2,0,0,21585.0,21407.0,49680.0
+DreiWJ_79 Loewenthal-6 000.dat,79 Loewenthal-6,6,grün,0,0,0,0,0.0,47680.0
+DreiWJ_794 Nathan-1 000.dat,794 Nathan-1,1,gelb,4,2,0,21524.0,10772.25,49680.0
+DreiWJ_460 Eze-1 000.dat,460 Eze-1,1,grün,0,0,0,0,0.0,47680.0
+DreiWJ_367 Bîhmer-2 000.dat,367 Böhmer-2,2,grün,4,0,0,1627.0,1345.5,47680.0
+DreiWJ_340 Grimm-1 000.dat,340 Grimm-1,1,grün,0,0,0,0,0.0,47680.0
+DreiWJ_329 Werner-2 000.dat,329 Werner-2,2,grün,0,0,0,0,0.0,47680.0
+DreiWJ_147 Mensah-2 000.dat,147 Mensah-2,2,rot,3,1,1,17161.0,9759.333333333334,49680.0
+DreiWJ_133 Teichmann-5 000-rep-rep.dat,133 Teichmann-5,5,grün,0,0,0,0,0.0,47680.0
+DreiWJ_145 Beraz 11-5 000.dat,145 Beraz 11-5,5,grün,0,0,0,0,0.0,47680.0
+DreiWJ_758 Brîkling-1 000.dat,758 Brökling-1,1,grün,0,0,0,0,0.0,49680.0
+DreiWJ_229 Lukas-1 000.dat,229 Lukas-1,1,grün,0,0,0,0,0.0,49680.0
+DreiWJ_118 Edzards-2 000.dat,118 Edzards-2,2,grün,2,0,0,9463.0,9404.0,47680.0
+DreiWJ_340 Grimm-4 000.dat,340 Grimm-4,4,grün,0,0,0,0,0.0,47680.0
+DreiWJ_79 Loewenthal-2 000.dat,79 Loewenthal-2,2,grün,0,0,0,0,0.0,47680.0
+DreiWJ_460 Eze-5 000.dat,460 Eze-5,5,grün,0,0,0,0,0.0,47680.0
+DreiWJ_794 Nathan-5 000.dat,794 Nathan-5,5,grün,0,0,0,0,0.0,49680.0
+DreiWJ_242 D Aveta-3 000.dat,242 D Aveta-3,3,grün,0,0,0,0,0.0,49680.0
+DreiWJ_133 Teichmann-2 000.dat,133 Teichmann-2,2,grün,0,0,0,0,0.0,47680.0
+DreiWJ_524 Baudisch-1 000.dat,524 Baudisch-1,1,rot,2,0,1,12164.0,11711.0,49680.0
+DreiWJ_34 Hellwig-1 000.dat,34 Hellwig-1,1,grün,0,0,0,0,0.0,49680.0
+DreiWJ_133 Teichmann-3 001.dat,133 Teichmann-3,3,grün,0,0,0,0,0.0,47680.0
+DreiWJ_79 Loewenthal-3 000.dat,79 Loewenthal-3,3,grün,0,0,0,0,0.0,47680.0
+DreiWJ_794 Nathan-4 000.dat,794 Nathan-4,4,grün,0,0,0,0,0.0,49680.0
+DreiWJ_460 Eze-4 000.dat,460 Eze-4,4,grün,0,0,0,0,0.0,47680.0
+DreiWJ_142 Ketzel-1 000.dat,142 Ketzel-1,1,grün,0,0,0,0,0.0,49680.0
+DreiWJ_242 D Aveta-2 000.dat,242 D Aveta-2,2,grün,0,0,0,0,0.0,49680.0
+DreiWJ_133 Teichmann-3 000.dat,133 Teichmann-3,3,grün,0,0,0,0,0.0,47680.0
+DreiWJ_133 Teichmann-3 000-rep.dat,133 Teichmann-3,3,grün,0,0,0,0,0.0,47680.0
+DreiWJ_145 Beraz 11-1 000.dat,145 Beraz 11-1,1,grün,0,0,0,0,0.0,47680.0
+DreiWJ_775 Jaske 9-2 000.dat,775 Jaske 9-2,2,grün,0,0,0,0,0.0,49680.0
+DreiWJ_147 Mensah-6 000.dat,147 Mensah-6,6,grün,0,0,0,0,0.0,49680.0
+DreiWJ_118 Edzards-3 000.dat,118 Edzards-3,3,grün,8,0,0,22206.0,10037.25,47680.0
+DreiWJ_794 Nathan-6 000.dat,794 Nathan-6,6,grün,0,0,0,0,0.0,49680.0
+DreiWJ_460 Eze-6 000.dat,460 Eze-6,6,grün,0,0,0,0,0.0,47680.0
+DreiWJ_34 Hellwig-3 000.dat,34 Hellwig-3,3,grün,0,0,0,0,0.0,49680.0
+DreiWJ_524 Baudisch-2 000.dat,524 Baudisch-2,2,rot,4,1,1,18006.0,10274.5,49680.0
+DreiWJ_133 Teichmann-1 000.dat,133 Teichmann-1,1,grün,0,0,0,0,0.0,47680.0
+DreiWJ_142 Ketzel-3 000.dat,142 Ketzel-3,3,grün,0,0,0,0,0.0,49680.0
+DreiWJ_145 Beraz 11-3 000.dat,145 Beraz 11-3,3,grün,0,0,0,0,0.0,47680.0
+DreiWJ_118 Edzards-1 000.dat,118 Edzards-1,1,grün,0,0,0,0,0.0,47680.0
+DreiWJ_145 Beraz 11-2 000.dat,145 Beraz 11-2,2,grün,0,0,0,0,0.0,47680.0
+DreiWJ_147 Mensah-5 000.dat,147 Mensah-5,5,grün,0,0,0,0,0.0,49680.0
+DreiWJ_775 Jaske 9-1 000.dat,775 Jaske 9-1,1,grün,0,0,0,0,0.0,49680.0
+DreiWJ_340 Grimm-6 000.dat,340 Grimm-6,6,grün,0,0,0,0,0.0,47680.0
+DreiWJ_34 Hellwig-2 000.dat,34 Hellwig-2,2,grün,0,0,0,0,0.0,49680.0
+DreiWJ_133 Teichmann-5 000-rep.dat,133 Teichmann-5,5,grün,0,0,0,0,0.0,47680.0
+DreiWJ_524 Baudisch-3 000.dat,524 Baudisch-3,3,gelb,3,2,0,16758.0,10070.666666666666,49680.0
+DreiWJ_142 Ketzel-2 000.dat,142 Ketzel-2,2,rot,3,0,1,13565.0,9074.666666666666,49680.0
+Weit WM_310 Schade-1 000.dat,310 Schade-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_602 StÅtz-3 000.dat,602 Stütz-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_23 Osazee-6 000.dat,23 Osazee-6,6,grün,0,0,0,0,0.0,48280.0
+Weit WM_355 Karsten-1 004.dat,355 Karsten-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_513 JÑckel-1 000.dat,513 Jäckel-1,1,rot,2,0,1,24850.0,17203.0,48280.0
+Weit WM_154 Kremling-2 000.dat,154 Kremling-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_680 Ferber-1 000.dat,680 Ferber-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_681 HÅttner-6 000.dat,681 Hüttner-6,6,grün,0,0,0,0,0.0,48280.0
+Weit WM_448 Schulze-2 000.dat,448 Schulze-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_298 Ahiandjipe-1 000.dat,298 Ahiandjipe-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_729 Limberg-2 000.dat,729 Limberg-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_115 Yamah-1 000.dat,115 Yamah-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_650 Eltz-6 000.dat,650 Eltz-6,6,grün,0,0,0,0,0.0,48280.0
+Weit WM_355 Karsten-1 002.dat,355 Karsten-1,1,grün,3,0,0,24479.0,13844.0,48280.0
+Weit WM_448 Schulze-3 000.dat,448 Schulze-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_729 Limberg-3 000.dat,729 Limberg-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_355 Karsten-1 003.dat,355 Karsten-1,1,grün,4,0,0,19048.0,12738.5,48280.0
+Weit WM_161 Gawron-1 000.dat,161 Gawron-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_602 StÅtz-2 000.dat,602 Stütz-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_23 Osazee-2 000-rep.dat,23 Osazee-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_355 Karsten-1 000.dat,355 Karsten-1,1,gelb,3,1,0,33025.0,15942.333333333334,48280.0
+Weit WM_154 Kremling-3 000.dat,154 Kremling-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_681 HÅttner-5 000.dat,681 Hüttner-5,5,grün,0,0,0,0,0.0,48280.0
+Weit WM_115 Yamah-3 000.dat,115 Yamah-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_650 Eltz-4 000.dat,650 Eltz-4,4,grün,0,0,0,0,0.0,48280.0
+Weit WM_729 Limberg-1 000.dat,729 Limberg-1,1,rot,4,1,1,31472.0,17950.0,48280.0
+Weit WM_161 Gawron-3 000.dat,161 Gawron-3,3,gelb,3,1,0,31417.0,21545.0,48280.0
+Weit WM_448 Schulze-1 000.dat,448 Schulze-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_298 Ahiandjipe-2 000.dat,298 Ahiandjipe-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_513 JÑckel-2 000.dat,513 Jäckel-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_310 Schade-2 000.dat,310 Schade-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_154 Kremling-1 000.dat,154 Kremling-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_680 Ferber-2 000.dat,680 Ferber-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_355 Karsten-3 000.dat,355 Karsten-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_448 Schulze-4 000-rep.dat,448 Schulze-4,4,grün,0,0,0,0,0.0,48280.0
+Weit WM_310 Schade-3 000.dat,310 Schade-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_513 JÑckel-3 000.dat,513 Jäckel-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_23 Osazee-4 000.dat,23 Osazee-4,4,grün,0,0,0,0,0.0,48280.0
+Weit WM_602 StÅtz-1 000.dat,602 Stütz-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_355 Karsten-2 000.dat,355 Karsten-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_680 Ferber-3 000.dat,680 Ferber-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_681 HÅttner-4 000.dat,681 Hüttner-4,4,grün,0,0,0,0,0.0,48280.0
+Weit WM_310 Schade-6 000-rep.dat,310 Schade-6,6,grün,0,0,0,0,0.0,48280.0
+Weit WM_650 Eltz-5 000.dat,650 Eltz-5,5,grün,0,0,0,0,0.0,48280.0
+Weit WM_161 Gawron-2 000.dat,161 Gawron-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_298 Ahiandjipe-3 000.dat,298 Ahiandjipe-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_448 Schulze-5 000.dat,448 Schulze-5,5,grün,0,0,0,0,0.0,48280.0
+Weit WM_23 Osazee-3 000-rep.dat,23 Osazee-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_681 HÅttner-1 000.dat,681 Hüttner-1,1,grün,4,0,0,21100.0,11907.75,48280.0
+Weit WM_680 Ferber-6 000.dat,680 Ferber-6,6,grün,0,0,0,0,0.0,48280.0
+Weit WM_215 Ziegler-2 000.dat,215 Ziegler-2,2,rot,3,0,2,38606.0,19567.0,48280.0
+Weit WM_185 Maurer-3 000.dat,185 Maurer-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_310 Schade-6 000.dat,310 Schade-6,6,grün,0,0,0,0,0.0,48280.0
+Weit WM_23 Osazee-1 000.dat,23 Osazee-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_513 JÑckel-6 000.dat,513 Jäckel-6,6,grün,0,0,0,0,0.0,48280.0
+Weit WM_650 Eltz-5 000-rep.dat,650 Eltz-5,5,grün,0,0,0,0,0.0,48280.0
+Weit WM_215 Ziegler-3 000.dat,215 Ziegler-3,3,grün,3,0,0,26006.0,19876.666666666668,48280.0
+Weit WM_185 Maurer-2 000.dat,185 Maurer-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_448 Schulze-3 000-rep.dat,448 Schulze-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_448 Schulze-4 000.dat,448 Schulze-4,4,grün,4,0,0,22130.0,12481.0,48280.0
+Weit WM_650 Eltz-1 000.dat,650 Eltz-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WM_215 Ziegler-1 000.dat,215 Ziegler-1,1,grün,8,0,0,16157.0,9135.75,48280.0
+Weit WM_23 Osazee-5 000-rep.dat,23 Osazee-5,5,grün,0,0,0,0,0.0,48280.0
+Weit WM_355 Karsten-4 000.dat,355 Karsten-4,4,grün,0,0,0,0,0.0,48280.0
+Weit WM_680 Ferber-5 000.dat,680 Ferber-5,5,grün,0,0,0,0,0.0,48280.0
+Weit WM_513 JÑckel-5 000.dat,513 Jäckel-5,5,grün,0,0,0,0,0.0,48280.0
+Weit WM_23 Osazee-2 000.dat,23 Osazee-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_448 Schulze-6 000.dat,448 Schulze-6,6,grün,0,0,0,0,0.0,48280.0
+Weit WM_650 Eltz-3 000.dat,650 Eltz-3,3,grün,0,0,0,0,0.0,48280.0
+Weit WM_681 HÅttner-2 000.dat,681 Hüttner-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_650 Eltz-2 000.dat,650 Eltz-2,2,grün,0,0,0,0,0.0,48280.0
+Weit WM_681 HÅttner-3 000.dat,681 Hüttner-3,3,rot,6,1,1,29055.0,19255.333333333332,48280.0
+Weit WM_680 Ferber-4 000.dat,680 Ferber-4,4,grün,0,0,0,0,0.0,48280.0
+Weit WM_355 Karsten-5 000.dat,355 Karsten-5,5,grün,0,0,0,0,0.0,48280.0
+Weit WM_310 Schade-4 000.dat,310 Schade-4,4,grün,0,0,0,0,0.0,48280.0
+Weit WM_513 JÑckel-4 000.dat,513 Jäckel-4,4,grün,0,0,0,0,0.0,48280.0
+Weit WM_23 Osazee-3 000.dat,23 Osazee-3,3,gelb,5,2,0,20424.0,13562.2,48280.0
+Weit WM_185 Maurer-1 000.dat,185 Maurer-1,1,grün,0,0,0,0,0.0,48280.0
+Weit WU_813 Sohn-1 000.dat,813 Sohn-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_459 Ehlers-2 000.dat,459 Ehlers-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_658 Zeigermann-5 000.dat,658 Zeigermann-5,5,grün,0,0,0,0,0.0,46280.0
+Weit WU_118 Edzards-1 000.dat,118 Edzards-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_497 Servatius-3 000.dat,497 Servatius-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_350 Waldkirch-4 000.dat,350 Waldkirch-4,4,grün,4,0,0,3938.0,2639.0,46280.0
+Weit WU_359 Schwesig-2 000.dat,359 Schwesig-2,2,grün,5,0,0,4911.0,2458.0,46280.0
+Weit WU_343 Michelmann-3 000.dat,343 Michelmann-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_828 Combe-2 000.dat,828 Combe-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_813 Sohn-5 000-rep.dat,813 Sohn-5,5,grün,0,0,0,0,0.0,46280.0
+Weit WU_585 Gîtze-1 000.dat,585 Götze-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_267 Anochili-1 000.dat,267 Anochili-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_267 Anochili-6 000-rep.dat,267 Anochili-6,6,grün,0,0,0,0,0.0,46280.0
+Weit WU_828 Combe-3 000.dat,828 Combe-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_329 Werner-1 000.dat,329 Werner-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_655 Freitag-6 000.dat,655 Freitag-6,6,grün,0,0,0,0,0.0,46280.0
+Weit WU_814 Schinko-1 000.dat,814 Schinko-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_205 Siedler-1 000.dat,205 Siedler-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_658 Zeigermann-4 000.dat,658 Zeigermann-4,4,grün,0,0,0,0,0.0,46280.0
+Weit WU_459 Ehlers-3 000.dat,459 Ehlers-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_497 Servatius-2 000.dat,497 Servatius-2,2,grün,2,0,0,5886.0,4891.5,46280.0
+Weit WU_79 Loewenthal-2 000.dat,79 Loewenthal-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_645 Krug-1 000.dat,645 Krug-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_350 Waldkirch-5 000.dat,350 Waldkirch-5,5,grün,0,0,0,0,0.0,46280.0
+Weit WU_343 Michelmann-2 000.dat,343 Michelmann-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_267 Anochili-2 000.dat,267 Anochili-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_585 Gîtze-2 000.dat,585 Götze-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_828 Combe-1 000.dat,828 Combe-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_813 Sohn-5 000-rep-rep.dat,813 Sohn-5,5,grün,0,0,0,0,0.0,46280.0
+Weit WU_205 Siedler-3 000.dat,205 Siedler-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_814 Schinko-3 000.dat,814 Schinko-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_655 Freitag-4 000.dat,655 Freitag-4,4,grün,0,0,0,0,0.0,46280.0
+Weit WU_645 Krug-3 000.dat,645 Krug-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_118 Edzards-2 000.dat,118 Edzards-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_459 Ehlers-1 000.dat,459 Ehlers-1,1,gelb,4,1,0,12028.0,7281.75,46280.0
+Weit WU_658 Zeigermann-6 000.dat,658 Zeigermann-6,6,grün,0,0,0,0,0.0,46280.0
+Weit WU_813 Sohn-2 000.dat,813 Sohn-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_267 Anochili-5 000-rep.dat,267 Anochili-5,5,grün,0,0,0,0,0.0,46280.0
+Weit WU_359 Schwesig-1 000.dat,359 Schwesig-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_350 Waldkirch-6 000.dat,350 Waldkirch-6,6,grün,0,0,0,0,0.0,46280.0
+Weit WU_655 Freitag-2 000-rep.dat,655 Freitag-2,2,grün,2,0,0,19044.0,10524.5,46280.0
+Weit WU_813 Sohn-3 000.dat,813 Sohn-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_79 Loewenthal-1 000.dat,79 Loewenthal-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_497 Servatius-1 000.dat,497 Servatius-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_118 Edzards-3 000.dat,118 Edzards-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_343 Michelmann-1 000.dat,343 Michelmann-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_585 Gîtze-3 000.dat,585 Götze-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_329 Werner-2 000.dat,329 Werner-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_267 Anochili-3 000.dat,267 Anochili-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_205 Siedler-2 000.dat,205 Siedler-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_814 Schinko-2 000.dat,814 Schinko-2,2,grün,1,0,0,2019.0,2019.0,46280.0
+Weit WU_777 Roos-1 000.dat,777 Roos-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_288 Opitz-3 000.dat,288 Opitz-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_595 Utassy-3 000.dat,595 Utassy-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_585 Gîtze-6 000.dat,585 Götze-6,6,grün,0,0,0,0,0.0,46280.0
+Weit WU_267 Anochili-6 000.dat,267 Anochili-6,6,grün,0,0,0,0,0.0,46280.0
+Weit WU_828 Combe-5 000.dat,828 Combe-5,5,grün,0,0,0,0,0.0,46280.0
+Weit WU_655 Freitag-2 000-rep-rep.dat,655 Freitag-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_687 Winkler-1 000.dat,687 Winkler-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_638 Kermes-2 000.dat,638 Kermes-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_350 Waldkirch-3 000.dat,350 Waldkirch-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_813 Sohn-6 000.dat,813 Sohn-6,6,grün,0,0,0,0,0.0,46280.0
+Weit WU_658 Zeigermann-2 000.dat,658 Zeigermann-2,2,rot,4,0,1,25547.0,16313.25,46280.0
+Weit WU_459 Ehlers-5 000.dat,459 Ehlers-5,5,grün,0,0,0,0,0.0,46280.0
+Weit WU_638 Kermes-3 000.dat,638 Kermes-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_459 Ehlers-4 000.dat,459 Ehlers-4,4,grün,0,0,0,0,0.0,46280.0
+Weit WU_658 Zeigermann-3 000.dat,658 Zeigermann-3,3,grün,4,0,0,11413.0,6049.75,46280.0
+Weit WU_288 Opitz-2 000.dat,288 Opitz-2,2,grün,4,0,0,6776.0,5093.75,46280.0
+Weit WU_655 Freitag-1 000.dat,655 Freitag-1,1,gelb,3,2,0,15612.0,8407.333333333334,46280.0
+Weit WU_595 Utassy-2 000.dat,595 Utassy-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_828 Combe-4 000.dat,828 Combe-4,4,grün,0,0,0,0,0.0,46280.0
+Weit WU_638 Kermes-1 000.dat,638 Kermes-1,1,gelb,4,2,0,35240.0,17452.5,46280.0
+Weit WU_687 Winkler-2 000.dat,687 Winkler-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_497 Servatius-2 000-rep.dat,497 Servatius-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_658 Zeigermann-1 000.dat,658 Zeigermann-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_459 Ehlers-6 000.dat,459 Ehlers-6,6,grün,0,0,0,0,0.0,46280.0
+Weit WU_655 Freitag-3 000.dat,655 Freitag-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_777 Roos-2 000.dat,777 Roos-2,2,grün,0,0,0,0,0.0,46280.0
+Weit WU_828 Combe-6 000.dat,828 Combe-6,6,grün,0,0,0,0,0.0,46280.0
+Weit WU_267 Anochili-5 000.dat,267 Anochili-5,5,grün,0,0,0,0,0.0,46280.0
+Weit WU_585 Gîtze-5 000.dat,585 Götze-5,5,grün,0,0,0,0,0.0,46280.0
+Weit WU_595 Utassy-1 000.dat,595 Utassy-1,1,rot,4,1,1,21119.0,15623.5,46280.0
+Weit WU_655 Freitag-2 000.dat,655 Freitag-2,2,grün,2,0,0,19044.0,10524.5,46280.0
+Weit WU_288 Opitz-1 000.dat,288 Opitz-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_777 Roos-3 000.dat,777 Roos-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_267 Anochili-4 000.dat,267 Anochili-4,4,grün,0,0,0,0,0.0,46280.0
+Weit WU_687 Winkler-3 000.dat,687 Winkler-3,3,grün,0,0,0,0,0.0,46280.0
+Weit WU_813 Sohn-4 000.dat,813 Sohn-4,4,grün,0,0,0,0,0.0,46280.0
+Weit WU_777 Roos-1 000-rep.dat,777 Roos-1,1,grün,0,0,0,0,0.0,46280.0
+Weit WU_350 Waldkirch-1 000.dat,350 Waldkirch-1,1,grün,0,0,0,0,0.0,46280.0
