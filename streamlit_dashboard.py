@@ -387,7 +387,6 @@ def main():
         st.image("https://osp-hessen.de/wp-content/uploads/2021/03/OSP_Logo_2021_RGB.png", width=150)
     with col2:
         st.title("Anlaufanalyse Dashboard")
-        st.caption("Deutsche Jugendmeisterschaften 2025 - Weit- und Dreisprung")
     
     st.markdown("---")
     
@@ -426,8 +425,9 @@ def main():
             (df['folder'].isin(folder_filter))
         ]
         
-        # Display table
+        # Display table with selection
         display_df = filtered_df[['Athlet', 'Versuch', 'Lücken', 'Qualität']].copy()
+        display_df.insert(0, 'Index', range(len(display_df)))
         
         # Color code quality
         def color_quality(row):
@@ -442,28 +442,47 @@ def main():
         
         styled_df = display_df.style.apply(color_quality, axis=1)
         
-        # Selection
+        # Show dataframe
         st.dataframe(
             styled_df,
             use_container_width=True,
-            height=600,
+            height=500,
             hide_index=True
         )
         
-        # Select row
-        selected_idx = st.number_input(
-            "Zeile auswählen (0-basiert)",
-            min_value=0,
-            max_value=len(filtered_df)-1,
-            value=0,
-            step=1
+        st.markdown("---")
+        
+        # Select attempt
+        st.subheader("🎯 Versuch auswählen")
+        
+        # Create selection options
+        selection_options = []
+        for idx, row in filtered_df.iterrows():
+            selection_options.append(
+                f"{row['Athlet']} - Versuch {row['Versuch']} ({row['Qualität']})"
+            )
+        
+        if len(selection_options) == 0:
+            st.warning("Keine Versuche gefunden. Bitte Filter anpassen.")
+            return
+        
+        # Session state for selection
+        if 'selected_attempt' not in st.session_state:
+            st.session_state.selected_attempt = selection_options[0]
+        
+        selected_option = st.selectbox(
+            "Wähle einen Versuch:",
+            options=selection_options,
+            index=selection_options.index(st.session_state.selected_attempt) if st.session_state.selected_attempt in selection_options else 0,
+            key='attempt_selector'
         )
         
-        if selected_idx < len(filtered_df):
-            selected_file = filtered_df.iloc[selected_idx]
-        else:
-            st.warning("Ungültige Auswahl")
-            return
+        # Update session state
+        st.session_state.selected_attempt = selected_option
+        
+        # Get selected row
+        selected_idx = selection_options.index(selected_option)
+        selected_file = filtered_df.iloc[selected_idx]
     
     with col_right:
         st.subheader("📊 Detailanalyse")
