@@ -384,7 +384,13 @@ def main():
     # Header
     col1, col2 = st.columns([1, 4])
     with col1:
-        st.image("https://osp-hessen.de/wp-content/uploads/2021/03/OSP_Logo_2021_RGB.png", width=150)
+        # Try to load local logo, fallback to online version
+        import os
+        logo_path = "osp_logo.png"
+        if os.path.exists(logo_path):
+            st.image(logo_path, width=200)
+        else:
+            st.image("https://osp-hessen.de/wp-content/uploads/2021/03/OSP_Logo_2021_RGB.png", width=150)
     with col2:
         st.title("Anlaufanalyse Dashboard")
     
