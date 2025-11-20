@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from analyze_movement_data import MovementDataAnalyzer
+from hybrid_ssa_interpolator import HybridSSAInterpolator
 
 # Page config - MUST be first Streamlit command
 st.set_page_config(
@@ -80,6 +81,18 @@ def load_analyzer():
         "Input files/Weit W"
     ]
     return MovementDataAnalyzer(folders)
+
+@st.cache_resource
+def load_interpolator():
+    """Load the trained Hybrid SSA Interpolator"""
+    interpolator = HybridSSAInterpolator(window_size=40)
+    model_path = "hybrid_ssa_models.pkl"
+    if os.path.exists(model_path):
+        interpolator.load_models(model_path)
+        return interpolator
+    else:
+        st.warning("⚠️ SSA models not found. Run hybrid_ssa_interpolator.py first to train models.")
+        return None
 
 @st.cache_data
 def load_file_list(_analyzer):
@@ -269,41 +282,75 @@ def create_plot(analyzer, data, takeoff_point, athlete_name, attempt_num, ssa_fi
     # Mark gaps with transparent/dashed areas
     if gaps:
         gap_legend_added = False
+        ssa_legend_added = False
+        
         for gap in gaps:
             idx = gap['index']
             gap_size_m = gap['difference'] / 1000  # Convert to meters
             
-            # Add vertical dashed line at gap position
-            fig.add_vline(
-                x=idx, 
-                line_dash="dash", 
-                line_color='red',
-                line_width=2,
-                opacity=0.6,
-                row=1, col=1,
-                annotation_text=f"Lücke: {gap_size_m:.1f}m",
-                annotation_position="top"
-            )
+            # Check if this gap was interpolated (if ssa_ranges provided)
+            is_interpolated = ssa_ranges and any(start <= idx <= end for start, end in ssa_ranges)
             
-            # Add transparent area to show gap region
-            fig.add_vrect(
-                x0=idx-0.5, x1=idx+1.5,
-                fillcolor='red',
-                opacity=0.1,
-                line_width=0,
-                row=1, col=1
-            )
-            
-            # Add legend entry only once
-            if not gap_legend_added:
-                fig.add_trace(go.Scatter(
-                    x=[None], y=[None],
-                    mode='lines',
-                    line=dict(color='red', width=2, dash='dash'),
-                    name='Datenlücke',
-                    showlegend=True
-                ), row=1, col=1)
-                gap_legend_added = True
+            if is_interpolated:
+                # Interpolated gap - show in purple/lilac
+                fig.add_vline(
+                    x=idx, 
+                    line_dash="dot", 
+                    line_color='#a259d9',
+                    line_width=2,
+                    opacity=0.7,
+                    row=1, col=1,
+                    annotation_text=f"Interpoliert: {gap_size_m:.1f}m",
+                    annotation_position="top"
+                )
+                
+                fig.add_vrect(
+                    x0=idx-0.5, x1=idx+1.5,
+                    fillcolor='#a259d9',
+                    opacity=0.15,
+                    line_width=0,
+                    row=1, col=1
+                )
+                
+                if not ssa_legend_added:
+                    fig.add_trace(go.Scatter(
+                        x=[None], y=[None],
+                        mode='lines',
+                        line=dict(color='#a259d9', width=2, dash='dot'),
+                        name='SSA Interpoliert',
+                        showlegend=True
+                    ), row=1, col=1)
+                    ssa_legend_added = True
+            else:
+                # Non-interpolated gap - show in red
+                fig.add_vline(
+                    x=idx, 
+                    line_dash="dash", 
+                    line_color='red',
+                    line_width=2,
+                    opacity=0.6,
+                    row=1, col=1,
+                    annotation_text=f"Lücke: {gap_size_m:.1f}m",
+                    annotation_position="top"
+                )
+                
+                fig.add_vrect(
+                    x0=idx-0.5, x1=idx+1.5,
+                    fillcolor='red',
+                    opacity=0.1,
+                    line_width=0,
+                    row=1, col=1
+                )
+                
+                if not gap_legend_added:
+                    fig.add_trace(go.Scatter(
+                        x=[None], y=[None],
+                        mode='lines',
+                        line=dict(color='red', width=2, dash='dash'),
+                        name='Datenlücke',
+                        showlegend=True
+                    ), row=1, col=1)
+                    gap_legend_added = True
     
     # Takeoff line
     fig.add_hline(
@@ -422,6 +469,7 @@ def main():
     # Load data
     try:
         analyzer = load_analyzer()
+        interpolator = load_interpolator()
         df = load_file_list(analyzer)
     except Exception as e:
         st.error(f"Fehler beim Laden der Daten: {e}")
@@ -498,6 +546,13 @@ def main():
     with col_right:
         st.subheader("📊 Detailanalyse")
         
+        # Toggle for interpolation
+        col_toggle1, col_toggle2 = st.columns([3, 1])
+        with col_toggle1:
+            st.markdown("")  # Spacer
+        with col_toggle2:
+            show_interpolation = st.checkbox("🔮 SSA Interpolation", value=False, help="Zeige Hybrid-SSA interpolierte Daten")
+        
         try:
             # Load selected file
             filepath = selected_file['filepath']
@@ -505,8 +560,19 @@ def main():
             gap_analysis = analyzer.analyze_gaps_until_takeoff(filepath)
             gaps = gap_analysis['gaps']
             
-            # SSA interpolation
-            ssa_filled, ssa_ranges = analyzer.fill_gaps_with_ssa(data, gaps)
+            # Hybrid SSA interpolation
+            ssa_filled = data
+            ssa_ranges = []
+            interpolation_info = []
+            
+            if show_interpolation and interpolator and len(gaps) > 0:
+                ssa_filled, interpolation_info = interpolator.fill_all_gaps(
+                    data, athlete_name, gaps, min_confidence=0.3
+                )
+                # Create ranges for visualization
+                for info in interpolation_info:
+                    if info['interpolated']:
+                        ssa_ranges.append((info['index'], info['index'] + 1))
             
             # Status badge
             status = selected_file['status']
@@ -522,10 +588,19 @@ def main():
             
             st.markdown(f'<div class="status-badge {badge_class}">{badge_text}</div>', unsafe_allow_html=True)
             
-            # Gap badge
+            # Gap badge with interpolation info
             num_gaps = len(gaps)
             if num_gaps > 0:
-                st.warning(f"⚠️ {num_gaps} Datenlücke(n) detektiert")
+                if show_interpolation and interpolation_info:
+                    num_interpolated = sum(1 for info in interpolation_info if info['interpolated'])
+                    avg_confidence = np.mean([info['confidence'] for info in interpolation_info if info['interpolated']]) if num_interpolated > 0 else 0
+                    
+                    if num_interpolated > 0:
+                        st.info(f"🔮 {num_interpolated} von {num_gaps} Lücke(n) interpoliert (Ø Confidence: {avg_confidence:.0%})")
+                    else:
+                        st.warning(f"⚠️ {num_gaps} Datenlücke(n) - Confidence zu niedrig für Interpolation")
+                else:
+                    st.warning(f"⚠️ {num_gaps} Datenlücke(n) detektiert")
             else:
                 st.success("✅ Keine Datenlücken")
             
@@ -570,11 +645,11 @@ def main():
                 else:
                     st.info("Keine Daten verfügbar")
             
-            # Gaps table
+            # Gaps table with interpolation info
             if gaps:
                 st.markdown("### 🔍 Lücken-Details")
                 gap_data = []
-                for g in gaps:
+                for i, g in enumerate(gaps):
                     zone = ''
                     if g.get('zone_6_1'):
                         zone = '🔴 6-1m (kritisch)'
@@ -583,13 +658,25 @@ def main():
                     else:
                         zone = '-'
                     
-                    gap_data.append({
+                    row = {
                         'Index': g['index'],
                         'Start (m)': f"{g['start_value']/1000:.2f}",
                         'Ende (m)': f"{g['end_value']/1000:.2f}",
                         'Größe (m)': f"{g['difference']/1000:.2f}",
                         'Zone': zone
-                    })
+                    }
+                    
+                    # Add interpolation info if available
+                    if show_interpolation and interpolation_info and i < len(interpolation_info):
+                        info = interpolation_info[i]
+                        if info['interpolated']:
+                            row['Interpoliert'] = f"✅ {info['confidence']:.0%}"
+                            row['Methode'] = info['method']
+                        else:
+                            row['Interpoliert'] = f"❌ {info['confidence']:.0%}"
+                            row['Methode'] = '-'
+                    
+                    gap_data.append(row)
                 
                 st.dataframe(pd.DataFrame(gap_data), use_container_width=True, hide_index=True)
             else:
