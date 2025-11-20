@@ -544,14 +544,13 @@ def main():
         st.caption(f"📌 Ausgewählt: {selected_file['Athlet']} - Versuch {selected_file['Versuch']}")
     
     with col_right:
-        st.subheader("📊 Detailanalyse")
-        
-        # Toggle for interpolation
-        col_toggle1, col_toggle2 = st.columns([3, 1])
-        with col_toggle1:
-            st.markdown("")  # Spacer
-        with col_toggle2:
-            show_interpolation = st.checkbox("🔮 SSA Interpolation", value=False, help="Zeige Hybrid-SSA interpolierte Daten")
+        # Header with toggle
+        col_header1, col_header2 = st.columns([2, 1])
+        with col_header1:
+            st.subheader("📊 Detailanalyse")
+        with col_header2:
+            st.markdown("<br>", unsafe_allow_html=True)
+            show_interpolation = st.toggle("🔮 SSA Interpolation", value=False, help="Zeige Hybrid-SSA interpolierte Daten")
         
         try:
             # Load selected file
