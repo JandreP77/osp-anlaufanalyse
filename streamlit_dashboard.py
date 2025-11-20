@@ -260,33 +260,54 @@ def create_plot(analyzer, data, takeoff_point, athlete_name, attempt_num, ssa_fi
     
     # Original data
     fig.add_trace(go.Scatter(
-        y=data, 
+        y=[d/1000 for d in data],  # Convert to meters
         name='Messdaten', 
         line=dict(color='blue', width=2),
-        hovertemplate='Frame: %{x}<br>Distanz: %{y:.0f} mm<extra></extra>'
+        hovertemplate='Frame: %{x}<br>Distanz: %{y:.2f} m<extra></extra>'
     ), row=1, col=1)
     
-    # SSA interpolation areas
-    if ssa_ranges:
-        for (start, end) in ssa_ranges:
+    # Mark gaps with transparent/dashed areas
+    if gaps:
+        gap_legend_added = False
+        for gap in gaps:
+            idx = gap['index']
+            gap_size_m = gap['difference'] / 1000  # Convert to meters
+            
+            # Add vertical dashed line at gap position
+            fig.add_vline(
+                x=idx, 
+                line_dash="dash", 
+                line_color='red',
+                line_width=2,
+                opacity=0.6,
+                row=1, col=1,
+                annotation_text=f"Lücke: {gap_size_m:.1f}m",
+                annotation_position="top"
+            )
+            
+            # Add transparent area to show gap region
             fig.add_vrect(
-                x0=start, x1=end, 
-                fillcolor='#a259d9', 
-                opacity=0.2, 
-                line_width=0, 
+                x0=idx-0.5, x1=idx+1.5,
+                fillcolor='red',
+                opacity=0.1,
+                line_width=0,
                 row=1, col=1
             )
-        fig.add_trace(go.Scatter(
-            x=[None], y=[None], 
-            mode='markers',
-            marker=dict(size=10, color='#a259d9'),
-            name='Interpoliert (SSA)',
-            showlegend=True
-        ), row=1, col=1)
+            
+            # Add legend entry only once
+            if not gap_legend_added:
+                fig.add_trace(go.Scatter(
+                    x=[None], y=[None],
+                    mode='lines',
+                    line=dict(color='red', width=2, dash='dash'),
+                    name='Datenlücke',
+                    showlegend=True
+                ), row=1, col=1)
+                gap_legend_added = True
     
     # Takeoff line
     fig.add_hline(
-        y=takeoff_point, 
+        y=takeoff_point/1000,  # Convert to meters
         line_dash="dash", 
         line_color=OSP_COLORS['red'],
         line_width=2,
@@ -295,18 +316,19 @@ def create_plot(analyzer, data, takeoff_point, athlete_name, attempt_num, ssa_fi
         row=1, col=1
     )
     
-    # Critical zones
-    zone_11_6_start = takeoff_point - 11000
-    zone_11_6_end = takeoff_point - 6000
-    zone_6_1_start = takeoff_point - 6000
-    zone_6_1_end = takeoff_point - 1000
+    # Critical zones (in meters)
+    zone_11_6_start = (takeoff_point - 11000) / 1000
+    zone_11_6_end = (takeoff_point - 6000) / 1000
+    zone_6_1_start = (takeoff_point - 6000) / 1000
+    zone_6_1_end = (takeoff_point - 1000) / 1000
     
     fig.add_hrect(
         y0=zone_11_6_start, y1=zone_11_6_end,
         fillcolor=OSP_COLORS['gold'], 
-        opacity=0.1,
-        line_width=0,
-        annotation_text="11-6m Zone",
+        opacity=0.15,
+        line_width=1,
+        line_color=OSP_COLORS['gold'],
+        annotation_text="Zone 11-6m vor Absprung",
         annotation_position="left",
         row=1, col=1
     )
@@ -314,9 +336,10 @@ def create_plot(analyzer, data, takeoff_point, athlete_name, attempt_num, ssa_fi
     fig.add_hrect(
         y0=zone_6_1_start, y1=zone_6_1_end,
         fillcolor=OSP_COLORS['red'], 
-        opacity=0.08,
-        line_width=0,
-        annotation_text="6-1m Zone (kritisch)",
+        opacity=0.12,
+        line_width=1,
+        line_color=OSP_COLORS['red'],
+        annotation_text="Zone 6-1m vor Absprung (KRITISCH)",
         annotation_position="left",
         row=1, col=1
     )
@@ -375,7 +398,7 @@ def create_plot(analyzer, data, takeoff_point, athlete_name, attempt_num, ssa_fi
     
     fig.update_xaxes(title_text='Messpunkt', row=1, col=1, gridcolor=OSP_COLORS['light_gray'])
     fig.update_xaxes(title_text='Messpunkt', row=2, col=1, gridcolor=OSP_COLORS['light_gray'])
-    fig.update_yaxes(title_text='Distanz (mm)', row=1, col=1, gridcolor=OSP_COLORS['light_gray'])
+    fig.update_yaxes(title_text='Distanz (m)', row=1, col=1, gridcolor=OSP_COLORS['light_gray'])
     fig.update_yaxes(title_text='Geschwindigkeit (m/s)', row=2, col=1, gridcolor=OSP_COLORS['light_gray'])
     
     return fig
@@ -448,47 +471,29 @@ def main():
         
         styled_df = display_df.style.apply(color_quality, axis=1)
         
-        # Show dataframe
-        st.dataframe(
+        # Show interactive dataframe with selection
+        event = st.dataframe(
             styled_df,
             use_container_width=True,
             height=500,
-            hide_index=True
+            hide_index=True,
+            on_select="rerun",
+            selection_mode="single-row"
         )
+        
+        # Get selected row from dataframe interaction
+        if event.selection and event.selection.rows:
+            selected_row_idx = event.selection.rows[0]
+            selected_file = filtered_df.iloc[selected_row_idx]
+        else:
+            # Default to first row if nothing selected
+            if len(filtered_df) == 0:
+                st.warning("Keine Versuche gefunden. Bitte Filter anpassen.")
+                return
+            selected_file = filtered_df.iloc[0]
         
         st.markdown("---")
-        
-        # Select attempt
-        st.subheader("🎯 Versuch auswählen")
-        
-        # Create selection options
-        selection_options = []
-        for idx, row in filtered_df.iterrows():
-            selection_options.append(
-                f"{row['Athlet']} - Versuch {row['Versuch']} ({row['Qualität']})"
-            )
-        
-        if len(selection_options) == 0:
-            st.warning("Keine Versuche gefunden. Bitte Filter anpassen.")
-            return
-        
-        # Session state for selection
-        if 'selected_attempt' not in st.session_state:
-            st.session_state.selected_attempt = selection_options[0]
-        
-        selected_option = st.selectbox(
-            "Wähle einen Versuch:",
-            options=selection_options,
-            index=selection_options.index(st.session_state.selected_attempt) if st.session_state.selected_attempt in selection_options else 0,
-            key='attempt_selector'
-        )
-        
-        # Update session state
-        st.session_state.selected_attempt = selected_option
-        
-        # Get selected row
-        selected_idx = selection_options.index(selected_option)
-        selected_file = filtered_df.iloc[selected_idx]
+        st.caption(f"📌 Ausgewählt: {selected_file['Athlet']} - Versuch {selected_file['Versuch']}")
     
     with col_right:
         st.subheader("📊 Detailanalyse")
@@ -516,6 +521,14 @@ def main():
                 badge_text = '🟢 GUT'
             
             st.markdown(f'<div class="status-badge {badge_class}">{badge_text}</div>', unsafe_allow_html=True)
+            
+            # Gap badge
+            num_gaps = len(gaps)
+            if num_gaps > 0:
+                st.warning(f"⚠️ {num_gaps} Datenlücke(n) detektiert")
+            else:
+                st.success("✅ Keine Datenlücken")
+            
             st.caption(f"Sampling Rate: {analyzer.sampling_rate} Hz | Absprung: {takeoff_point/1000:.2f}m")
             
             # Plot
@@ -541,7 +554,7 @@ def main():
                 st.markdown("### Zone 11-6m")
                 if zone_11_6:
                     st.metric("Ø Geschwindigkeit", f"{zone_11_6['mean_velocity']:.2f} m/s")
-                    st.metric("Schrittlänge", f"{zone_11_6['step_length_mean']:.1f} mm")
+                    st.metric("Schrittlänge", f"{zone_11_6['step_length_mean']/1000:.3f} m")
                     st.metric("Beschleunigung", f"{zone_11_6['acceleration_mean']:.2f} m/s²")
                     st.metric("Lücken", zone_11_6['gaps'])
                 else:
@@ -551,7 +564,7 @@ def main():
                 st.markdown("### Zone 6-1m")
                 if zone_6_1:
                     st.metric("Ø Geschwindigkeit", f"{zone_6_1['mean_velocity']:.2f} m/s")
-                    st.metric("Schrittlänge", f"{zone_6_1['step_length_mean']:.1f} mm")
+                    st.metric("Schrittlänge", f"{zone_6_1['step_length_mean']/1000:.3f} m")
                     st.metric("Beschleunigung", f"{zone_6_1['acceleration_mean']:.2f} m/s²")
                     st.metric("Lücken", zone_6_1['gaps'])
                 else:
@@ -572,13 +585,15 @@ def main():
                     
                     gap_data.append({
                         'Index': g['index'],
-                        'Start (mm)': f"{g['start_value']:.0f}",
-                        'Ende (mm)': f"{g['end_value']:.0f}",
-                        'Größe (mm)': f"{g['difference']:.0f}",
+                        'Start (m)': f"{g['start_value']/1000:.2f}",
+                        'Ende (m)': f"{g['end_value']/1000:.2f}",
+                        'Größe (m)': f"{g['difference']/1000:.2f}",
                         'Zone': zone
                     })
                 
                 st.dataframe(pd.DataFrame(gap_data), use_container_width=True, hide_index=True)
+            else:
+                st.success("✅ Keine Lücken detektiert!")
         
         except Exception as e:
             st.error(f"Fehler beim Laden der Datei: {e}")
