@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from analyze_movement_data import MovementDataAnalyzer
-from hybrid_ssa_interpolator import HybridSSAInterpolator
 from kalman_ssa_interpolator import KalmanSSAInterpolator
 
 # Page config - MUST be first Streamlit command
@@ -84,21 +83,9 @@ def load_analyzer():
     return MovementDataAnalyzer(folders)
 
 @st.cache_resource
-def load_interpolator():
-    """Load the trained Hybrid SSA Interpolator"""
-    interpolator = HybridSSAInterpolator(window_size=40)
-    model_path = "hybrid_ssa_models.pkl"
-    if os.path.exists(model_path):
-        interpolator.load_models(model_path)
-        return interpolator
-    else:
-        st.warning("⚠️ SSA models not found. Run hybrid_ssa_interpolator.py first to train models.")
-        return None
-
-@st.cache_resource
 def load_kalman_interpolator():
-    """Load the Kalman+SSA Interpolator (Olympic-grade)"""
-    return KalmanSSAInterpolator(sampling_rate=50, ssa_window=40)
+    """Load the Kalman+SSA Interpolator (Olympic-grade) with global models"""
+    return KalmanSSAInterpolator(sampling_rate=50, ssa_window=40, use_global_models=True)
 
 @st.cache_data
 def load_file_list(_analyzer):
@@ -462,7 +449,6 @@ def main():
     # Load data
     try:
         analyzer = load_analyzer()
-        interpolator = load_interpolator()
         kalman_interpolator = load_kalman_interpolator()
         df = load_file_list(analyzer)
     except Exception as e:
